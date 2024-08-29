@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Window - YouTube Video Player</title>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      display: flexbox;
+      overflow:hidden;
+    }
+  </style>
+  <script>
+    function windowFiller(){
+      const player = document.getElementById("player");  
+      player.height = window.innerHeight;
+      player.width = window.innerWidth;
+    }
+  </script>
+</head>
+<body onLoad="setInterval(windowFiller, 10)">
+  <center>
+    <iframe id="player" src="https://www.youtube.com/embed/Lydgf-Hvla4?si=Is-HwYYPR6cOLLCi" />
+  </center>  
+</body>
+</html>
